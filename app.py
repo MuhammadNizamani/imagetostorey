@@ -180,7 +180,7 @@ with col1:
     if uploaded_file is not None:
         try:
             image = Image.open(uploaded_file)
-            image_display_slot.image(image, caption="Uploaded Image.", use_column_width=True)
+            image_display_slot.image(image, caption="Uploaded Image.", use_container_width=True)
             # Re-open the file to get bytes for the API call later
             uploaded_file.seek(0) # Reset file pointer to the beginning
             uploaded_image_bytes = io.BytesIO(uploaded_file.getvalue())
